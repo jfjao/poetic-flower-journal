@@ -14,14 +14,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, variant = 'default', size = 'md', to, isExternal, ...props }, ref) => {
     const baseStyles = cn(
-      'relative inline-flex items-center justify-center rounded-md font-handwritten transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-deep-green/50 disabled:opacity-50 disabled:pointer-events-none overflow-hidden group',
+      'relative inline-flex items-center justify-center rounded-md font-handwritten text-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-deep-green/50 disabled:opacity-50 disabled:pointer-events-none overflow-hidden group',
       {
         'bg-deep-green text-cream hover:bg-deep-green/90': variant === 'default',
         'border-2 border-deep-green/70 text-deep-green hover:bg-deep-green/10': variant === 'outline',
         'text-deep-green hover:bg-deep-green/10': variant === 'ghost',
-        'text-sm px-3 py-1.5': size === 'sm',
-        'text-base px-5 py-2.5': size === 'md',
-        'text-lg px-7 py-3': size === 'lg',
+        'text-xl px-3 py-1.5': size === 'sm',
+        'text-2xl px-5 py-2.5': size === 'md',
+        'text-3xl px-7 py-3': size === 'lg',
       },
       className
     );

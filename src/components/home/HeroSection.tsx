@@ -78,10 +78,10 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button to="/creations" size="lg">
+              <Button to="/creations" size="lg" className="py-4 px-8">
                 Commander un bouquet
               </Button>
-              <Button to="/about" variant="outline" size="lg">
+              <Button to="/about" variant="outline" size="lg" className="py-4 px-8">
                 Découvrir notre univers
               </Button>
             </div>
