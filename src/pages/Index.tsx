@@ -149,9 +149,9 @@ const Index = () => {
                 <div className="relative">
                   <div className="handdrawn-frame p-1">
                     <ImageLoader 
-                      src="/lovable-uploads/587f519e-d9f0-4e2c-bf64-7434cb390a33.png"
-                      alt="Taxi Amore - Stand floral" 
-                      className="aspect-[3/4] rounded-md overflow-hidden relative z-10"
+                      src="/lovable-uploads/d1c5b3aa-8057-4d47-8588-43a00af8d744.png"
+                      alt="Taxi Amore - Bouquet sur le tableau de bord d'un taxi" 
+                      className="aspect-[1/1] rounded-md overflow-hidden relative z-10"
                     />
                   </div>
                   
