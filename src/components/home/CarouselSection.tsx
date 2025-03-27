@@ -1,18 +1,29 @@
 
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import ImageCarousel from '@/components/ImageCarousel';
 
 const CarouselSection: FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    // Ajouter un léger délai pour s'assurer que le composant est monté
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="text-center mb-12 fade-up-element opacity-0">
+        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="handwritten text-xl">Notre univers</span>
           <h2 className="font-serif text-3xl md:text-4xl mt-2">La vie en fleurs</h2>
           <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
         </div>
         
-        <div className="fade-up-element opacity-0">
+        <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <ImageCarousel 
             images={[
               "/lovable-uploads/22a9ddfe-2fe8-4192-a0c8-492f6b284c08.png",

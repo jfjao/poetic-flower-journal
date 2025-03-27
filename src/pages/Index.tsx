@@ -9,31 +9,6 @@ import CarouselSection from '@/components/home/CarouselSection';
 import CTASection from '@/components/home/CTASection';
 
 const Index = () => {
-  // Intersection Observer for fade-up animations
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-up');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.fade-up-element').forEach((el) => {
-      observer.observe(el);
-    });
-
-    return () => {
-      document.querySelectorAll('.fade-up-element').forEach((el) => {
-        observer.unobserve(el);
-      });
-    };
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
