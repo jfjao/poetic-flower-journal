@@ -48,7 +48,7 @@ const Navbar = () => {
             strokeWidth={1.5}
           />
           <div className="flex flex-col">
-            <span className="handwritten text-xl leading-none">heartmade</span>
+            <span className="handwritten text-3xl leading-none">heartmade</span>
             <span className="font-serif font-medium text-xl tracking-wide leading-none">Taxi Amore</span>
           </div>
         </Link>
