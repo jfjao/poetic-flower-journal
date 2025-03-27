@@ -33,8 +33,8 @@ const Navbar = () => {
   return (
     <header 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-        isScrolled ? 'py-2 bg-cream/80 backdrop-blur-md shadow-sm' : 'py-4 bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 scallop-border-top',
+        isScrolled ? 'py-2 bg-light-beige/95 backdrop-blur-md shadow-sm' : 'py-4 bg-light-beige'
       )}
     >
       <div className="container max-w-7xl mx-auto px-4 flex justify-between items-center">
@@ -102,7 +102,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          'md:hidden fixed inset-x-0 bg-cream/95 backdrop-blur-md transition-all duration-500 ease-in-out border-b border-deep-green/10 overflow-hidden',
+          'md:hidden fixed inset-x-0 bg-light-beige/95 backdrop-blur-md transition-all duration-500 ease-in-out border-b border-deep-green/10 overflow-hidden',
           isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
         )}
       >
