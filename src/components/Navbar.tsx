@@ -43,18 +43,10 @@ const Navbar = () => {
           className="flex items-center space-x-2"
           aria-label="Taxi Amore"
         >
-          <svg 
-            className="w-7 h-7 stroke-deep-green flower-icon" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="1.5" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          >
-            <path d="M12 2a4 4 0 0 0-4 4 6 6 0 0 0 6 6 6 6 0 0 0 6-6 4 4 0 0 0-4-4 4 4 0 0 0-4 4 6 6 0 0 0 6 6 6 6 0 0 0 6-6 4 4 0 0 0-4-4 4 4 0 0 0-4 4 6 6 0 0 0 6 6 6 6 0 0 0 6-6 4 4 0 0 0-4-4h0" />
-            <path d="M12 17v5" />
-          </svg>
+          <Flower 
+            className="w-7 h-7 text-deep-green flower-icon" 
+            strokeWidth={1.5}
+          />
           <div className="flex flex-col">
             <span className="handwritten text-xs leading-none">heartmade</span>
             <span className="font-serif font-medium text-xl tracking-wide leading-none">Taxi Amore</span>
