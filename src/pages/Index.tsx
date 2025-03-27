@@ -55,10 +55,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-light-beige">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      <main className="flex-grow pt-24">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section className="min-h-screen flex flex-col items-center justify-center pt-20 pb-10 px-4 relative overflow-hidden">
           {/* Background decorative elements */}
@@ -68,7 +68,7 @@ const Index = () => {
                 <div 
                   key={i} 
                   className={cn(
-                    "petal absolute top-1/2 left-1/2 w-20 h-2 bg-bordeaux/70 rounded-full origin-left transition-transform duration-700 ease-out",
+                    "petal absolute top-1/2 left-1/2 w-20 h-2 bg-rose-plum/70 rounded-full origin-left transition-transform duration-700 ease-out",
                   )}
                   style={{ transform: `rotate(${i * 45}deg)` }}
                 ></div>
@@ -77,7 +77,7 @@ const Index = () => {
             </div>
             
             <div className="absolute bottom-20 left-[8%] w-60 h-60 border-2 border-deep-green/30 rounded-full"></div>
-            <div className="absolute top-40 left-[15%] w-20 h-20 border border-bordeaux/30 rounded-full"></div>
+            <div className="absolute top-40 left-[15%] w-20 h-20 border border-rose-plum/30 rounded-full"></div>
           </div>
           
           <div className="container mx-auto max-w-7xl z-10">
@@ -85,9 +85,9 @@ const Index = () => {
               <div className="order-2 lg:order-1 fade-up-element opacity-100">
                 <div className="mb-6 flex flex-col items-start">
                   <span className="handwritten text-lg mb-2 animate-fade-in">heartmade</span>
-                  <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight text-deep-green">
+                  <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
                     <span className="block">Taxi Amore</span>
-                    <span className="text-2xl sm:text-3xl md:text-4xl text-bordeaux block mt-2">
+                    <span className="text-2xl sm:text-3xl md:text-4xl text-rose-plum block mt-2">
                       Atelier floral poétique
                     </span>
                   </h1>
@@ -122,7 +122,7 @@ const Index = () => {
                     <span className="handwritten text-lg">Fleurs & Poésie</span>
                   </div>
                   
-                  <div className="absolute -top-6 -left-6 z-0 w-full h-full bg-bordeaux/10 rounded-md border border-bordeaux/20"></div>
+                  <div className="absolute -top-6 -left-6 z-0 w-full h-full bg-rose-plum/10 rounded-md border border-rose-plum/20"></div>
                 </div>
               </div>
             </div>
@@ -134,8 +134,8 @@ const Index = () => {
           <div className="container mx-auto max-w-7xl px-4">
             <div className="text-center mb-16 fade-up-element opacity-100">
               <span className="handwritten text-xl">Nos services</span>
-              <h2 className="font-serif text-3xl md:text-4xl mt-2 text-deep-green">L'expérience Taxi Amore</h2>
-              <div className="w-16 h-1 bg-bordeaux/50 mx-auto mt-4"></div>
+              <h2 className="font-serif text-3xl md:text-4xl mt-2">L'expérience Taxi Amore</h2>
+              <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -164,7 +164,7 @@ const Index = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="font-serif text-xl mb-2 text-deep-green">{feature.title}</h3>
+                  <h3 className="font-serif text-xl mb-2">{feature.title}</h3>
                   <p className="text-deep-green/80">{feature.description}</p>
                 </div>
               ))}
@@ -173,12 +173,12 @@ const Index = () => {
         </section>
         
         {/* Gallery Preview */}
-        <section className="py-20 bg-light-beige">
+        <section className="py-20 bg-cream">
           <div className="container mx-auto max-w-7xl px-4">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 fade-up-element opacity-100">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 fade-up-element opacity-0">
               <div>
                 <span className="handwritten text-xl">Notre portfolio</span>
-                <h2 className="font-serif text-3xl md:text-4xl mt-2 text-deep-green">Créations récentes</h2>
+                <h2 className="font-serif text-3xl md:text-4xl mt-2">Créations récentes</h2>
               </div>
               <Button to="/creations" variant="outline" className="mt-4 md:mt-0">
                 Voir toutes les créations
@@ -194,7 +194,7 @@ const Index = () => {
               ].map((item, index) => (
                 <div 
                   key={index} 
-                  className="fade-up-element opacity-100" 
+                  className="fade-up-element opacity-0" 
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <ImageLoader 
@@ -204,7 +204,7 @@ const Index = () => {
                   />
                   <div className="px-1">
                     <span className="handwritten text-sm text-deep-green/70">{item.category}</span>
-                    <h3 className="font-serif text-lg text-deep-green">{item.title}</h3>
+                    <h3 className="font-serif text-lg">{item.title}</h3>
                   </div>
                 </div>
               ))}
@@ -217,9 +217,9 @@ const Index = () => {
           <div className="absolute inset-0 bg-deep-green/5 -z-10"></div>
           <div className="absolute inset-0 bg-paper-texture bg-cover bg-center opacity-10 -z-10"></div>
           
-          <div className="container mx-auto max-w-3xl px-4 text-center fade-up-element opacity-100">
+          <div className="container mx-auto max-w-3xl px-4 text-center fade-up-element opacity-0">
             <span className="handwritten text-xl">Contactez-nous</span>
-            <h2 className="font-serif text-3xl md:text-4xl mt-2 mb-6 text-deep-green">Commandez votre bouquet personnalisé</h2>
+            <h2 className="font-serif text-3xl md:text-4xl mt-2 mb-6">Commandez votre bouquet personnalisé</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
               Laissez-nous créer une composition florale unique qui reflète votre personnalité et vos émotions.
               Chaque création est réalisée avec amour et attention aux détails.

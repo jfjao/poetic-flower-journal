@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,11 +26,8 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         cream: '#E4D8C8',
-        beige: '#E4D8C8',
-        'light-beige': '#F4EBD9',
         'deep-green': '#3E573D',
         'rose-plum': '#3C5D54',
-        'bordeaux': '#3C5D54',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
@@ -107,10 +105,6 @@ export default {
         'bloom': {
           '0%': { transform: 'scale(0.95)', opacity: '0.5' },
           '100%': { transform: 'scale(1)', opacity: '1' }
-        },
-        'scallop-wave': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-5px)' }
         }
       },
       animation: {
@@ -120,13 +114,11 @@ export default {
         'fade-up': 'fade-up 0.9s ease-out',
         'write-text': 'write-text 2s ease-out forwards',
         'float': 'float 6s ease-in-out infinite',
-        'bloom': 'bloom 1.5s ease-out forwards',
-        'scallop-wave': 'scallop-wave 8s ease-in-out infinite'
+        'bloom': 'bloom 1.5s ease-out forwards'
       },
       backgroundImage: {
         'paper-texture': "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80')",
         'floral-pattern': "url('https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80')",
-        'scallop-border': "url('/lovable-uploads/383ff3cf-f7d1-47dc-80cf-9b6bb6d00bec.png')"
       }
     }
   },
