@@ -1,12 +1,23 @@
 
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import ImageLoader from '@/components/ImageLoader';
 
 const FeaturesSection: FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    // Ajouter un léger délai pour s'assurer que le composant est monté
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="py-20 relative bg-deep-green/5">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="text-center mb-16 fade-up-element opacity-0">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="handwritten text-xl">Nos services</span>
           <h2 className="font-serif text-3xl md:text-4xl mt-2">L'expérience Taxi Amore</h2>
           <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
@@ -32,8 +43,8 @@ const FeaturesSection: FC = () => {
           ].map((feature, index) => (
             <div 
               key={index} 
-              className="paper-card p-6 fade-up-element opacity-0" 
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className={`paper-card p-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${(index * 100) + 300}ms` }}
             >
               <div className="mb-6 aspect-[4/3] overflow-hidden rounded-md handdrawn-frame">
                 <ImageLoader 

@@ -1,5 +1,5 @@
 
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Button from '@/components/Button';
 import ImageLoader from '@/components/ImageLoader';
 
@@ -10,6 +10,17 @@ interface GalleryItem {
 }
 
 const GallerySection: FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    // Ajouter un léger délai pour s'assurer que le composant est monté
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   const galleryItems: GalleryItem[] = [
     {
       image: "/lovable-uploads/767c3964-7d01-41e1-8ccd-741fcb6f172d.png",
@@ -36,7 +47,7 @@ const GallerySection: FC = () => {
   return (
     <section className="py-20 bg-cream">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 fade-up-element opacity-0">
+        <div className={`flex flex-col md:flex-row justify-between items-start md:items-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div>
             <span className="handwritten text-xl">Notre portfolio</span>
             <h2 className="font-serif text-3xl md:text-4xl mt-2">Créations récentes</h2>
@@ -50,8 +61,8 @@ const GallerySection: FC = () => {
           {galleryItems.map((item, index) => (
             <div 
               key={index} 
-              className="fade-up-element opacity-0" 
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${(index * 100) + 300}ms` }}
             >
               <ImageLoader 
                 src={item.image} 
