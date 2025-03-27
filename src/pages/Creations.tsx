@@ -28,43 +28,43 @@ const Creations = () => {
       id: 1,
       title: 'Bouquet Romantique',
       category: 'bouquets',
-      description: 'Un bouquet romantique aux teintes pastel',
-      image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=800&q=80'
+      description: 'Un bouquet romantique aux teintes roses et fuchsia',
+      image: '/lovable-uploads/767c3964-7d01-41e1-8ccd-741fcb6f172d.png'
     },
     {
       id: 2,
-      title: 'Décoration de Mariage',
+      title: 'Stand Floral',
       category: 'events',
-      description: 'Installation florale pour une cérémonie en plein air',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80'
+      description: 'Notre stand mobile décoré de bougainvilliers',
+      image: '/lovable-uploads/587f519e-d9f0-4e2c-bf64-7434cb390a33.png'
     },
     {
       id: 3,
-      title: 'Couronne Florale',
-      category: 'accessories',
-      description: 'Couronne délicate pour mariée ou occasion spéciale',
-      image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80'
+      title: 'Fleurs de Camille',
+      category: 'bouquets',
+      description: 'Des fleurs blanches délicates pour toutes occasions',
+      image: '/lovable-uploads/e406d80d-9cd8-4bde-8c1a-e45095782950.png'
     },
     {
       id: 4,
-      title: 'Arrangement de Table',
+      title: 'Taxi fleuri',
       category: 'events',
-      description: 'Centre de table pour dîner ou réception',
-      image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80'
+      description: 'Notre taxi rempli de fleurs prêtes à être livrées',
+      image: '/lovable-uploads/30ba7656-f9f4-422f-83ed-6f5a87b368f4.png'
     },
     {
       id: 5,
-      title: 'Bouquet Sauvage',
-      category: 'bouquets',
-      description: 'Composition aux allures champêtres',
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80'
+      title: 'Dans les coulisses',
+      category: 'objects',
+      description: 'La préparation de nos compositions florales',
+      image: '/lovable-uploads/e38430d2-d2ca-46d6-ac4d-6598ba1e8f53.png'
     },
     {
       id: 6,
-      title: 'Bougie Florale',
-      category: 'objects',
-      description: 'Bougie artisanale avec inclusion de fleurs séchées',
-      image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80'
+      title: 'Bijoux floraux',
+      category: 'accessories',
+      description: 'Nos créations de bijoux avec fleurs séchées',
+      image: '/lovable-uploads/1f951a6a-44af-43e2-af76-f75cfe912253.png'
     },
   ];
 

@@ -1,13 +1,21 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Button from '@/components/Button';
 import ImageLoader from '@/components/ImageLoader';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cn } from '@/lib/utils';
+import ImageCarousel from '@/components/ImageCarousel';
 
 const Index = () => {
   const daisyRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 300);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,6 +62,29 @@ const Index = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const galleryItems = [
+    {
+      image: "/lovable-uploads/767c3964-7d01-41e1-8ccd-741fcb6f172d.png",
+      title: "Bouquet Coloré",
+      category: "Bouquets"
+    },
+    {
+      image: "/lovable-uploads/4fc82421-b0fd-470d-b2a6-f7d8b0e70b61.png",
+      title: "Composition Florale",
+      category: "Événements"
+    },
+    {
+      image: "/lovable-uploads/30ba7656-f9f4-422f-83ed-6f5a87b368f4.png",
+      title: "Fleurs dans un Taxi",
+      category: "Stand Mobile"
+    },
+    {
+      image: "/lovable-uploads/1f951a6a-44af-43e2-af76-f75cfe912253.png",
+      title: "Roses et Gomphrenas",
+      category: "Bouquets"
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -82,7 +113,10 @@ const Index = () => {
           
           <div className="container mx-auto max-w-7xl z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
-              <div className="order-2 lg:order-1 fade-up-element opacity-100">
+              <div className={cn(
+                "order-2 lg:order-1 transition-all duration-1000",
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              )}>
                 <div className="mb-6 flex flex-col items-start">
                   <span className="handwritten text-lg mb-2 animate-fade-in">heartmade</span>
                   <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
@@ -108,12 +142,15 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="order-1 lg:order-2 relative fade-up-element opacity-100 lg:mr-[-100px] lg:ml-[50px]">
+              <div className={cn(
+                "order-1 lg:order-2 relative lg:mr-[-100px] lg:ml-[50px] transition-all duration-1000",
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              )}>
                 <div className="relative">
                   <div className="handdrawn-frame p-1">
                     <ImageLoader 
-                      src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
-                      alt="Taxi Amore - Atelier floral" 
+                      src="/lovable-uploads/587f519e-d9f0-4e2c-bf64-7434cb390a33.png"
+                      alt="Taxi Amore - Stand floral" 
                       className="aspect-[3/4] rounded-md overflow-hidden relative z-10"
                     />
                   </div>
@@ -132,7 +169,7 @@ const Index = () => {
         {/* Features Section */}
         <section className="py-20 relative bg-deep-green/5">
           <div className="container mx-auto max-w-7xl px-4">
-            <div className="text-center mb-16 fade-up-element opacity-100">
+            <div className="text-center mb-16 fade-up-element opacity-0">
               <span className="handwritten text-xl">Nos services</span>
               <h2 className="font-serif text-3xl md:text-4xl mt-2">L'expérience Taxi Amore</h2>
               <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
@@ -143,20 +180,24 @@ const Index = () => {
                 {
                   title: "Bouquets Personnalisés",
                   description: "Créations florales uniques adaptées à votre personnalité et à chaque occasion spéciale.",
-                  image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80"
+                  image: "/lovable-uploads/e406d80d-9cd8-4bde-8c1a-e45095782950.png"
                 },
                 {
                   title: "Stand Mobile",
                   description: "Notre atelier itinérant se déplace à travers Antananarivo pour vous proposer des fleurs fraîches.",
-                  image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
+                  image: "/lovable-uploads/587f519e-d9f0-4e2c-bf64-7434cb390a33.png"
                 },
                 {
                   title: "Événements",
                   description: "Nous sublimez vos événements avec des installations florales poétiques et sur-mesure.",
-                  image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80"
+                  image: "/lovable-uploads/e38430d2-d2ca-46d6-ac4d-6598ba1e8f53.png"
                 }
               ].map((feature, index) => (
-                <div key={index} className="paper-card p-6 fade-up-element opacity-100" style={{ transitionDelay: `${index * 100}ms` }}>
+                <div 
+                  key={index} 
+                  className="paper-card p-6 fade-up-element opacity-0" 
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
                   <div className="mb-6 aspect-[4/3] overflow-hidden rounded-md handdrawn-frame">
                     <ImageLoader 
                       src={feature.image} 
@@ -186,12 +227,7 @@ const Index = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { title: "Bouquet Printemps", category: "Bouquets", image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=800&q=80" },
-                { title: "Composition Vintage", category: "Événements", image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80" },
-                { title: "Couronne Florale", category: "Accessoires", image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" },
-                { title: "Bouquet Poétique", category: "Bouquets", image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80" },
-              ].map((item, index) => (
+              {galleryItems.map((item, index) => (
                 <div 
                   key={index} 
                   className="fade-up-element opacity-0" 
@@ -208,6 +244,28 @@ const Index = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Image Carousel */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto max-w-7xl px-4">
+            <div className="text-center mb-12 fade-up-element opacity-0">
+              <span className="handwritten text-xl">Notre univers</span>
+              <h2 className="font-serif text-3xl md:text-4xl mt-2">La vie en fleurs</h2>
+              <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
+            </div>
+            
+            <div className="fade-up-element opacity-0">
+              <ImageCarousel 
+                images={[
+                  "/lovable-uploads/22a9ddfe-2fe8-4192-a0c8-492f6b284c08.png",
+                  "/lovable-uploads/46932650-7cf0-4e69-ac52-d6694966d6f3.png",
+                  "/lovable-uploads/e406d80d-9cd8-4bde-8c1a-e45095782950.png",
+                  "/lovable-uploads/e38430d2-d2ca-46d6-ac4d-6598ba1e8f53.png"
+                ]}
+              />
             </div>
           </div>
         </section>
