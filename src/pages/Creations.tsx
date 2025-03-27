@@ -83,7 +83,7 @@ const Creations = () => {
             isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           )}>
             <header className="text-center mb-12">
-              <span className="handwritten text-xl">Notre portfolio</span>
+              <span className="handwritten text-3xl mb-2">Notre portfolio</span>
               <h1 className="font-serif text-4xl md:text-5xl mt-2 mb-4">Nos créations</h1>
               <p className="max-w-2xl mx-auto text-deep-green/80">
                 Découvrez nos créations florales uniques, conçues avec passion et sensibilité pour 

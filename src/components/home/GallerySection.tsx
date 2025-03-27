@@ -49,7 +49,7 @@ const GallerySection: FC = () => {
       <div className="container mx-auto max-w-7xl px-4">
         <div className={`flex flex-col md:flex-row justify-between items-start md:items-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div>
-            <span className="handwritten text-2xl">Notre portfolio</span>
+            <span className="handwritten text-3xl">Notre portfolio</span>
             <h2 className="font-serif text-3xl md:text-4xl mt-2">Créations récentes</h2>
           </div>
           <Button to="/creations" variant="outline" className="mt-4 md:mt-0">
@@ -70,7 +70,7 @@ const GallerySection: FC = () => {
                 className="aspect-square rounded-md overflow-hidden mb-3 handdrawn-frame"
               />
               <div className="px-1">
-                <span className="handwritten text-xl text-deep-green/70">{item.category}</span>
+                <span className="handwritten text-2xl text-deep-green/70">{item.category}</span>
                 <h3 className="font-serif text-lg">{item.title}</h3>
               </div>
             </div>

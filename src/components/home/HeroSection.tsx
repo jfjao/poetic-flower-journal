@@ -63,7 +63,7 @@ const HeroSection = () => {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           )}>
             <div className="mb-6 flex flex-col items-start">
-              <span className="handwritten text-2xl mb-2 animate-fade-in">heartmade</span>
+              <span className="handwritten text-3xl mb-2 animate-fade-in">heartmade</span>
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
                 <span className="block">Taxi Amore</span>
                 <span className="text-2xl sm:text-3xl md:text-4xl text-rose-plum block mt-2">
@@ -101,7 +101,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-6 -right-6 p-3 paper-card animate-float z-20">
-                <span className="handwritten text-2xl">Fleurs & Poésie</span>
+                <span className="handwritten text-3xl">Fleurs & Poésie</span>
               </div>
               
               <div className="absolute -top-6 -left-6 z-0 w-full h-full bg-rose-plum/10 rounded-md border border-rose-plum/20"></div>

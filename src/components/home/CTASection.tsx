@@ -20,7 +20,7 @@ const CTASection: FC = () => {
       <div className="absolute inset-0 bg-paper-texture bg-cover bg-center opacity-10 -z-10"></div>
       
       <div className={`container mx-auto max-w-3xl px-4 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <span className="handwritten text-2xl">Contactez-nous</span>
+        <span className="handwritten text-3xl">Contactez-nous</span>
         <h2 className="font-serif text-3xl md:text-4xl mt-2 mb-6">Commandez votre bouquet personnalisé</h2>
         <p className="text-lg mb-8 max-w-2xl mx-auto">
           Laissez-nous créer une composition florale unique qui reflète votre personnalité et vos émotions.
