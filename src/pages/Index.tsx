@@ -82,7 +82,7 @@ const Index = () => {
           
           <div className="container mx-auto max-w-7xl z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
-              <div className="order-2 lg:order-1 fade-up-element opacity-0">
+              <div className="order-2 lg:order-1 fade-up-element opacity-100">
                 <div className="mb-6 flex flex-col items-start">
                   <span className="handwritten text-lg mb-2 animate-fade-in">heartmade</span>
                   <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
@@ -108,7 +108,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="order-1 lg:order-2 relative fade-up-element opacity-0 lg:mr-[-100px] lg:ml-[50px]">
+              <div className="order-1 lg:order-2 relative fade-up-element opacity-100 lg:mr-[-100px] lg:ml-[50px]">
                 <div className="relative">
                   <div className="handdrawn-frame p-1">
                     <ImageLoader 
@@ -132,7 +132,7 @@ const Index = () => {
         {/* Features Section */}
         <section className="py-20 relative bg-deep-green/5">
           <div className="container mx-auto max-w-7xl px-4">
-            <div className="text-center mb-16 fade-up-element opacity-0">
+            <div className="text-center mb-16 fade-up-element opacity-100">
               <span className="handwritten text-xl">Nos services</span>
               <h2 className="font-serif text-3xl md:text-4xl mt-2">L'expérience Taxi Amore</h2>
               <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
@@ -156,7 +156,7 @@ const Index = () => {
                   image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80"
                 }
               ].map((feature, index) => (
-                <div key={index} className="paper-card p-6 fade-up-element opacity-0" style={{ transitionDelay: `${index * 100}ms` }}>
+                <div key={index} className="paper-card p-6 fade-up-element opacity-100" style={{ transitionDelay: `${index * 100}ms` }}>
                   <div className="mb-6 aspect-[4/3] overflow-hidden rounded-md handdrawn-frame">
                     <ImageLoader 
                       src={feature.image} 
