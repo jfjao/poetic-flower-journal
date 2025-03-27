@@ -28,7 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const ButtonContent = () => (
       <>
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10 group-hover:text-cream transition-colors duration-300">{children}</span>
         <span className="absolute inset-0 overflow-hidden rounded-md">
           <span className="absolute inset-0 rounded-md bg-rose-plum transition-all duration-500 group-hover:scale-x-100 ease-out origin-left scale-x-0"></span>
         </span>
