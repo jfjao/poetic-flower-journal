@@ -18,7 +18,7 @@ const CarouselSection: FC = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto max-w-7xl px-4">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="handwritten text-xl">Notre univers</span>
+          <span className="handwritten text-2xl">Notre univers</span>
           <h2 className="font-serif text-3xl md:text-4xl mt-2">La vie en fleurs</h2>
           <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
         </div>

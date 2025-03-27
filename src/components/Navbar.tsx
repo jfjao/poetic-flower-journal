@@ -48,7 +48,7 @@ const Navbar = () => {
             strokeWidth={1.5}
           />
           <div className="flex flex-col">
-            <span className="handwritten text-xs leading-none">heartmade</span>
+            <span className="handwritten text-base leading-none">heartmade</span>
             <span className="font-serif font-medium text-xl tracking-wide leading-none">Taxi Amore</span>
           </div>
         </Link>
@@ -112,7 +112,7 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={cn(
-                'nav-link transition-all duration-300',
+                'nav-link text-xl transition-all duration-300',
                 location.pathname === link.path ? 'active' : 'opacity-70 hover:opacity-100'
               )}
             >

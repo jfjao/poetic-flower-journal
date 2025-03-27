@@ -18,7 +18,7 @@ const FeaturesSection: FC = () => {
     <section className="py-20 relative bg-deep-green/5">
       <div className="container mx-auto max-w-7xl px-4">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="handwritten text-xl">Nos services</span>
+          <span className="handwritten text-2xl mb-2">Nos services</span>
           <h2 className="font-serif text-3xl md:text-4xl mt-2">L'expérience Taxi Amore</h2>
           <div className="w-16 h-1 bg-rose-plum/50 mx-auto mt-4"></div>
         </div>
