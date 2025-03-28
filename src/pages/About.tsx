@@ -62,8 +62,8 @@ const About = () => {
                 <div className="relative">
                   <div className="handdrawn-frame">
                     <ImageLoader 
-                      src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80" 
-                      alt="Le voyage de Taxi Amore" 
+                      src="/lovable-uploads/20729cb9-3048-4a07-9268-bb8fa7fafb61.png" 
+                      alt="Artisanes de Taxi Amore" 
                       className="aspect-[4/3] rounded-md overflow-hidden z-10"
                     />
                   </div>
